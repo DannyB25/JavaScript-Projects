@@ -38,6 +38,10 @@ function My_First_Function() {      //Defining the function and giving it a name
                                                             //with the "Button_Text" id
 }
 
+function displayDate() {
+    document.getElementById("demo").innerHTML = Date();
+}
+
 
 
 
