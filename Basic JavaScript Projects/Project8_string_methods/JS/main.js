@@ -26,7 +26,7 @@ function search_Method() { //named function
 
 function string_Method() { //named function
     var X = 2000000000;  //provide value to variable 
-    document.getElementById("Numbers_to_string").innerHTML = X.toString(); //provide id to method and reutrn value 
+    document.getElementById("Numbers_to_string").innerHTML = X.toString(); //provide id to method and return value 
 }
 
 function precision_Method() { //named function
