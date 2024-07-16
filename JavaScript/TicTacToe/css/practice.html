@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+    <p id="attempt"></p>
+    <p id="demo"></p>
+    <br>
+    <p id="displayCar"></p>
+    <br>
+    <p id="trying"></p>
+
+        <script>
+            document.getElementById("attempt").innerHTML= "Hello, arrow function!";
+    
+            let hello = "";
+            hello = () => {
+                return "Hello World";
+            }
+            document.getElementById("demo").innerHTML=hello();
+
+            var food;
+            food = (type) => "These are my favorite types of food:" + type;
+            document.getElementById("displayCar").innerHTML= food(" Italian, Mexican, Japanese and Greek");
+        
+            const numbers = [45,4,9,16,25];
+            let someOver18 = numbers.some(myFunction);
+            document.getElementById("trying").innerHTML = "Some over 18 is " + someOver18;
+
+            function myFunction(value, index, array) {
+                return value > 18;
+            }
+        </script>
+    </body>
+</html> 
