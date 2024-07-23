@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> <!--connecting to jQuery-->
+    </head>
+    <script> 
+        $(document).ready(function() {  //--setting up jQuery function-->
+            $("html").append( //--This will create a return to the HTML element-->
+               "<body>\
+                    <div id='container'>\
+                       <div id='inner'>\
+                            <h1>Basic jQuery</h1>\
+                            <p id='1'>Paragraph 1</p>\
+                            <p id='2'>Paragraph 2</p>\
+                            <p id='3'>Paragraph 3</p>\
+                            <p id='4'>Paragraph 4</p>\
+                        </div>\
+                    </div>\
+                </body>"
+            );
+            $("#1").click(function() {  //a function to be carried out through p id 1
+                console.log("You clicked a paragraph"); 
+            });
+            $("#2").css({"color":"red"}); //causes p id 2 to turn red
+            $("#3").click(function() { <!--function that hides --> //function to hide h1 when p id 3 is clicked
+                $("h1").hide(); 
+            });
+            $("#4").hide("1250"); //does a slow fade of p 4 when the html is started 
+
+        });
+    </script>
+</html> 
