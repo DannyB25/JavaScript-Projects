@@ -3,15 +3,70 @@
     <head>
         <meta charset="utf-8">
         <script src="JavaScript_3.js" defer></script>
+        <link  rel="stylesheet" href="css_3.css">
     </head>
     <body>
-        <h1>Guitars</h1>
-        <h3>Click on a guitar to see what manufacturer makes it!</h3>
+        
+
+        <h1 style="text-align: center;">Click the guitar to see our forms</h1>
+
+        <div id="picture">
+            <a href="#jump">
+            <img src="rory.webp" alt="Rory Gallagher's Guitar" width="300" height="400">
+            </a>
+        </div>
+
+        <h3 style="font-size: 8vw;">Click on a guitar to see what manufacturer makes it!</h3>
         <ul>
             <li onclick="displayType(this)" id="Les Paul" data-guitar-type="Gibson">Les Paul</li>
             <li onclick="displayType(this)" id="Fender" data-guitar-type="Fender">Stratocaster</li>
             <li onclick="displayType(this)" id="BC_Rich" data-guitar-type="B.C. Rich">Warlock</li>
             <li onclick="displayType(this)" id="Dean" data-guitar-type="Dean">Razorback</li>
         </ul>
+        <br>
+      
+        <br>
+
+        <div id="jump" style="text-align: center;">
+        <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" value="Bob Barker"><br>
+            <label for="number">Phone Number:</label><br>
+            <input type="text" id="number" value="867-5309"><br>
+            <input type="submit" value="Submit">
+        </form>
+        </div>
+        <br>
+
+        <button class="open-button" onclick="openForm()">Open Form</button>
+
+        <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h1>Login</h1>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit" class="btn">Login</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+
+        <div id="square">
+        </div>
+
+
+
+            <script>
+                document.body.classList.add('fade-out');
+                window.addEventListener('DOMContentLoaded', () => {
+                document.body.classList.remove('fade-out');
+                });
+              </script>
+            
+        
     </body>
 </html>

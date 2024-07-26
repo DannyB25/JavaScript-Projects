@@ -1,0 +1,7 @@
+/*The following are the CSS properties for the photo slideshow*/
+.fadein { position:relative; width:100px; height: 100px; }
+.fadein img { position:absolute; left:0; top:0; }
+
+h1 {
+    color: red;
+}
